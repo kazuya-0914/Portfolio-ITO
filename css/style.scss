@@ -1,0 +1,38 @@
+// ブレイクポイント -----
+$bp: (
+  sp: "max-width: 767px",
+  tb: "max-width: 899px",
+  pc: "mix-width: 900px",
+);
+@mixin media($value) {
+  @media screen and (#{map-get($bp, $value)}) {
+    @content;
+  }
+}
+
+// 色関係の設定 -----
+$c-main: #883038;
+$c-sub: #ffb600;
+$c-white: white;
+$c-back1: #bcbcbc;
+$c-back2: #1f1f1f; 
+
+/* --- 共通スタイル --- */
+
+body {
+  font-family: "Monomaniac One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+// それぞれのSCSSの読み込み -----
+
+// ヘッダー
+@import "header";
+
+// メインビジュアル
+@import "main-visual";

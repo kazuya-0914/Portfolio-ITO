@@ -1,0 +1,41 @@
+/* --- ヘッダー --- */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $c-back1;
+  .logo {
+    display: flex;
+    align-items: center;
+    div {
+      color: $c-main;
+      &:nth-of-type(1) {
+        font-size: 3rem;
+        margin-right: 1rem;
+      }
+      &:nth-of-type(2) {
+        font-size: 2rem;
+        padding-top: 0.7rem;
+      }
+    }
+  }
+  .hamburger {
+    display: grid;
+    grid-template-columns: 50%;
+    padding-top: 1.3rem;
+    padding-bottom: 0.7rem;
+    justify-content: center;
+    background-color: $c-main;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    div {
+      background-color: $c-white;
+      height: 3px;
+      border-radius: 50px;
+    }
+  }
+  .hamburger-menu {
+    display: none;
+  }
+}

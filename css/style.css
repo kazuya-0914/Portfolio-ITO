@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* --- 共通スタイル --- */
+body {
+  font-family: "Monomaniac One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* --- ヘッダー --- */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bcbcbc;
+}
+#header .logo {
+  display: flex;
+  align-items: center;
+}
+#header .logo div {
+  color: #883038;
+}
+#header .logo div:nth-of-type(1) {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+#header .logo div:nth-of-type(2) {
+  font-size: 2rem;
+  padding-top: 0.7rem;
+}
+#header .hamburger {
+  display: grid;
+  grid-template-columns: 50%;
+  padding-top: 1.3rem;
+  padding-bottom: 0.7rem;
+  justify-content: center;
+  background-color: #883038;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+#header .hamburger div {
+  background-color: white;
+  height: 3px;
+  border-radius: 50px;
+}
+#header .hamburger-menu {
+  display: none;
+}
+
+/* --- メインビジュアル --- */
+#main-visual {
+  background-color: #bcbcbc;
+}/*# sourceMappingURL=style.css.map */
