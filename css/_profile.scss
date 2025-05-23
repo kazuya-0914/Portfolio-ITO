@@ -1,0 +1,89 @@
+/* --- プロフィール --- */
+#profile {
+  // ベース背景
+  @include back("85vh", $c-white, $c-black);
+
+  // 見出し
+  @include heading($c-main);
+
+  // 正方形
+  position: relative;
+  %square {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .square-1 {
+    @extend %square;
+    background-color: $c-black;
+    left: calc(50% - clamp(10rem, 32vw, 30rem));
+    bottom: 5rem;
+  }
+  .square-2 {
+    @extend %square;
+    background-color: $c-black;
+    right: calc(50% - clamp(10rem, 32vw, 30rem));
+    bottom: 14rem;
+  }
+  .square-3 {
+    @extend %square;
+    background-color: $c-main;
+    right: calc(50% - clamp(5rem, 30vw, 30rem));
+    bottom: 4rem;
+  }
+  @include media(sp) {
+    .square-1 {
+      bottom: 16rem;
+    }
+    .square-3 {
+      bottom: 2rem;
+    }
+  }
+
+  // プロフィール
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    @include media(sp) {
+      flex-direction: column;
+    }
+    img {
+      width: 70%;
+    }
+    .text > p {
+      &:nth-of-type(1) {
+        span:nth-of-type(1) {
+          margin-right: clamp(0.5rem, 2.0vw, 1rem);
+        }
+      }
+      &:nth-of-type(2) {
+        font-size: 2rem;
+        span:nth-of-type(1) {
+          margin-right: clamp(1rem, 2.0vw, 1.5em);
+        }
+      }
+      &:nth-of-type(3) {
+        font-size: clamp(1rem, 2.0vw, 1.5rem);
+        font-family: "Kiwi Maru", serif;
+        margin-bottom: 0;
+        &::before {
+          content: "← ";
+        }
+        @include media(sp) {
+          &::before {
+            content: "↑ ";
+          }
+          &::after {
+            content: " ↑";
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        font-size: clamp(1rem, 2.0vw, 1.5rem);
+        font-family: "Kiwi Maru", serif;
+      }
+    }
+  }
+}

@@ -8,13 +8,13 @@
   <!-- CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Noto+Sans+JP:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Monomaniac+One&family=Noto+Sans+JP:wght@100..900&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- ヘッダー -->
-  <header id="header" class="px-5 py-3">
+  <header id="header">
     <div class="logo">
       <img src="img/logo.png" alt="ロゴ">
       <div>AOI ITO</div>
@@ -51,23 +51,31 @@
         <p>
           いちど すれちがったら<br>
           なんども あいたくなる<br>
-          そんな デザイン を
+          そんな <span>デザイン</span> を
         </p>
-        <div class="dots"></div>
+        <!-- 点 -->
+        <figure class="dots">
+          <div></div>
+          <div></div>
+          <div></div>
+        </figure>
         <!-- 正方形 -->
-        <div class="square"></div>
+        <figure class="square"></figure>
       </section>
     </article>
 
     <!-- プロフィール -->
     <article id="profile">
       <section>
-        <h3>Profile</h3>
-        <div>
+        <h3>
+          <span>P</span>
+          <span>rofile</span>
+        </h3>
+        <div class="profile">
           <figure>
             <img src="img/profile.png" alt="">
           </figure>
-          <div>
+          <div class="text">
             <p>
               <span>Aoi</span>
               <span>Ito</span>
@@ -76,62 +84,69 @@
               <span>イトウ</span>
               <span>アオイ</span>
             </p>
-            <p>
-              ←画像クリックで詳細の<br>ページに移動します
-            </p>
+            <p>画像クリックで</p>
+            <p>詳細のページに移動します</p>
           </div>
         </div>
         <!-- 正方形 -->
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <div class="square-1"></div>
+        <div class="square-2"></div>
+        <div class="square-3"></div>
       </section>
     </article>
       
     <!-- スキル -->
     <article id="skill">
       <section>
-        <h3>Skill</h3>
-        <div>
-          <figure>
-            <img src="" alt="デザイン">
-          </figure>
+        <h3>
+          <span>S</span>
+          <span>kill</span>
+        </h3>
+        <figcaption>
           <div>
-            <p>Design</p>
-            <p>Photoshop / Figma</p>
+            <figure>
+              <img src="img/design.png" alt="デザイン">
+            </figure>
+            <div>
+              <p>Design</p>
+              <p>Photoshop / Figma</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <figure>
-            <img src="" alt="コーディング">
-          </figure>
+
           <div>
-            <p>Coding</p>
-            <p>HTML / CSS / PHP</p>
+            <figure>
+              <img src="img/coding.png" alt="コーディング">
+            </figure>
+            <div>
+              <p>Coding</p>
+              <p>HTML / CSS / PHP</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <figure>
-            <img src="" alt="イラストレーション">
-          </figure>
+
           <div>
-            <p>Illustration</p>
-            <p>ibis Paint</p>
+            <figure>
+              <img src="img/illustration.png" alt="イラストレーション">
+            </figure>
+            <div>
+              <p>Illustration</p>
+              <p>ibis Paint</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <figure>
-            <img src="" alt="モデリング">
-          </figure>
+
           <div>
-            <p>Modeling</p>
-            <p>blender</p>
+            <figure>
+              <img src="img/modeling.png" alt="モデリング">
+            </figure>
+            <div>
+              <p>Modeling</p>
+              <p>blender</p>
+            </div>
           </div>
-        </div>
+        </figcaption>
         <!-- 正方形 -->
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <div class="square-1"></div>
+        <div class="square-2"></div>
+        <div class="square-3"></div>
       </section>
     </article>
       
@@ -139,25 +154,49 @@
     <!-- ワーク -->
     <article id="work">
       <section>
-        <h3>Work</h3>
-        <figure></figure>
-        <span>My Portfolio</span>
-        <figure>制作した作品を掲載します</figure>
+        <h3>
+          <span>W</span>
+          <span>ork</span>
+        </h3>
+        <!-- ワーク -->
+        <div class="portfolio">
+          <figure>PC版PFのサムネイル</figure>
+          <p>My Portfolio</p>
+        </div>
+        <figure class="collection">制作した作品を掲載します</figure>
         <!-- 正方形 -->
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <div class="square-1"></div>
+        <div class="square-2"></div>
+        <div class="square-3"></div>
         <!-- 画像 -->
-        <figure>
-          <img src="" alt="">
-        </figure>
+        <object>
+          <img src="img/logo-l.png" alt="ロゴ">
+        </object>
       </section>
     </article>
   </main>
     
   <!-- フッター -->
-  <footer>
-    <h3>Contact</h3>
+  <footer id="footer">
+    <section>
+      <h3>
+        <span>C</span>
+        <span>ontact</span>
+      </h3>
+      <p>お問い合わせは</p>
+      <p>下記メールアドレスまで</p>
+      <p>ご連絡ください。</p>
+      <figure>itoaoi.2002.design@gmail.com</figure>
+      <object>
+        <a href="#">
+          <img src="img/x.png" alt="X">
+        </a>
+        <a href="#">
+          <img src="img/instagram.png" alt="">
+        </a>
+      </object>
+      <small>Copyright © AOI ITO. All Rights Reserved.</small>
+    </section>
   </footer>
 
 <!-- JavaScript -->

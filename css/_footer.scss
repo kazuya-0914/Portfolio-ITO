@@ -1,0 +1,34 @@
+/* --- フッター --- */
+#footer {
+  // ベース背景
+  @include back("footer", $c-black, $c-white);
+
+  // 見出し
+  @include heading($c-sub);
+
+  // フッター
+  p {
+    font-size: clamp(1rem, 2.0vw, 1.5rem);
+    font-family: "Kiwi Maru", serif;
+    margin: 0;
+  }
+  figure {
+    display: inline-block;
+    margin: 3rem auto;
+    padding: clamp(1rem, 2.4vw, 2rem);
+    background-color: $c-white;
+    color: $c-black;
+    font-size: clamp(1rem, 3.2vw, 3rem);
+  }
+  object {
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 50%;
+    }
+  }
+  small {
+    font-size: 12px;
+    font-family: "Kiwi Maru", serif;
+  }
+}

@@ -1,0 +1,50 @@
+/* --- ディスクリプション --- */
+#description {
+  // ベース背景
+  @include back("85vh", $c-black, $c-white);
+  
+  p {
+    margin-bottom: 5rem;
+    @include media(sp) {
+      margin-bottom: 3rem;
+    }
+    > span {
+      color: $c-sub;
+    }
+  }
+  .dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 5rem;
+    @include media(sp) {
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    > div {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: $c-sub;
+      &:nth-of-type(1), &:nth-of-type(3) {
+        background-color: $c-white;
+      }
+      &:nth-of-type(2) {
+        background-color: $c-sub;
+      }
+    }
+  }
+  .square {
+    width: 6rem;
+    height: 6rem;
+    background-color: $c-sub;
+    margin: 0 auto;
+    transform: rotate(60deg);
+    @include media(sp) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

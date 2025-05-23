@@ -1,4 +1,13 @@
 /* --- メインビジュアル --- */
 #main-visual {
-  background-color: $c-back1;
+  height: 100vh;
+  padding-top: 8rem;
+  background-color: $c-back;
+  @include media(sp) {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  img {
+    width: 90%;
+  }
 }

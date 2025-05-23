@@ -1,24 +1,26 @@
-// ブレイクポイント -----
+// --- ブレイクポイント
 $bp: (
   sp: "max-width: 767px",
   tb: "max-width: 899px",
   pc: "mix-width: 900px",
 );
 @mixin media($value) {
-  @media screen and (#{map-get($bp, $value)}) {
+  @media (#{map-get($bp, $value)}) {
     @content;
   }
 }
 
-// 色関係の設定 -----
+// --- 色関係の設定 
 $c-main: #883038;
 $c-sub: #ffb600;
 $c-white: white;
-$c-back1: #bcbcbc;
-$c-back2: #1f1f1f; 
+$c-black: #1f1f1f;
+$c-back: #bcbcbc;
 
 /* --- 共通スタイル --- */
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Monomaniac One", sans-serif;
   font-weight: 400;
@@ -30,12 +32,31 @@ img {
 section {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
 }
 
-// それぞれのSCSSの読み込み -----
+// --- それぞれのSCSSの読み込み
+
+// 部品
+@import "components";
 
 // ヘッダー
 @import "header";
 
 // メインビジュアル
 @import "main-visual";
+
+// ディスクリプション
+@import "description";
+
+// プロフィール
+@import "profile";
+
+// スキル
+@import "skill";
+
+// ワーク
+@import "work";
+
+// フッター
+@import "footer";

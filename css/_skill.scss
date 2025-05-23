@@ -1,0 +1,75 @@
+/* --- スキル --- */
+#skill {
+  // ベース背景
+  @include back("auto", $c-black, $c-white);
+
+  // 見出し
+  @include heading($c-sub);
+
+  // 正方形
+  position: relative;
+  %square {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .square-1 {
+    @extend %square;
+    background-color: $c-white;
+    left: calc(50% - clamp(12rem, 40vw, 40rem));
+    bottom: 10rem;
+  }
+  .square-2 {
+    @extend %square;
+    background-color: $c-white;
+    right: calc(50% - clamp(10rem, 32vw, 30rem));
+    top: 14rem;
+  }
+  .square-3 {
+    @extend %square;
+    background-color: $c-sub;
+    left: calc(50% - clamp(5rem, 20vw, 20rem));
+    bottom: 3rem;
+  }
+  @include media(sp) {
+    .square-1 {
+      bottom: 4rem;
+    }
+    .square-2 {
+      top: 28rem;
+    }
+    .square-3 {
+      bottom: 1rem;
+    }
+  }
+
+  // スキル
+  figcaption {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 4rem;
+    > div {
+      display: grid;
+      grid-template-columns: 45% 45%;
+      justify-content: center;
+      align-items: center;
+      column-gap: 4rem;
+      > div > p:nth-of-type(1) {
+        font-size: clamp(2rem, 4.8vw, 4rem);
+      }
+      > div > p:nth-of-type(2) {
+        font-size: clamp(1rem, 3.2vw, 3rem);
+      }
+    }
+  }
+  @include media(sp) {
+    figcaption {
+      grid-template-columns: 45% 45%;
+      column-gap: 2rem;
+      > div {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+/* --- ワーク --- */
+#work {
+    // ベース背景
+  @include back("auto", $c-back, $c-black);
+
+  // 見出し
+  @include heading($c-main);
+
+  // 正方形 + 画像
+  position: relative;
+  %square {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .square-1 {
+    @extend %square;
+    background-color: $c-black;
+    right: calc(50% - clamp(12rem, 40vw, 40rem));
+    bottom: 10rem;
+  }
+  .square-2 {
+    @extend %square;
+    background-color: $c-black;
+    right: calc(50% - clamp(10rem, 32vw, 30rem));
+    top: 14rem;
+  }
+  .square-3 {
+    @extend %square;
+    background-color: $c-main;
+    right: calc(50% - clamp(15rem, 36vw, 25rem));
+    bottom: 3rem;
+  }
+  object {
+    position: absolute;
+    left: calc(50% - clamp(20rem, 48vw, 40rem));
+    bottom: -0.5rem;
+  }
+  @include media(sp) {
+    .square-1 {
+      bottom: 3rem;
+    }
+    .square-2 {
+      top: 8rem;
+    }
+    .square-3 {
+      left: calc(50% - clamp(10rem, 24vw, 20rem));
+      bottom: 0.5rem;
+    }
+    object {
+      display: none;
+    }
+  }
+
+  // ワーク
+  .portfolio {
+    margin: 0 auto;
+    width: 50%;
+    @include media(sp) {
+      width: 90%;
+    }
+    p {
+      text-align: left;
+      font-size: clamp(2rem, 4.0vw, 1.5rem);
+      margin-top: -0.5rem;
+    }
+  }
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 15rem;
+    background-color: $c-black;
+    color: $c-white;
+    font-size: clamp(1rem, 2.0vw, 1.5rem);
+    font-family: "Kiwi Maru", serif;
+    @include media(sp) {
+      height: 12rem;
+    }
+    &.collection {
+      width: 50%;
+      @include media(sp) {
+        width: 90%;
+      }
+    }
+  }
+
+}
