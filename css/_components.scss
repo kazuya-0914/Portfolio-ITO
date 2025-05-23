@@ -6,6 +6,10 @@
     height: auto;
     padding: 6rem 6rem 0;
   }
+  @else if $height == "hamburger-menu" {
+    height: auto;
+    padding-top: 6rem;
+  }
   @else {
     height: $height;
     padding: 6rem;
@@ -17,6 +21,10 @@
     @if $height == "footer" {
       height: auto;
       padding: 4rem 4rem 0;
+    }
+    @else if $height == "hamburger-menu" {
+      height: auto;
+      padding-top: 6rem 4rem 0;
     }
     @else {
       height: auto;

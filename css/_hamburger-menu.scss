@@ -1,0 +1,33 @@
+#hamburger-menu {
+  display: none;
+  // ベース背景
+  @include back("hamburger-menu", $c-white, $c-black);
+
+  // 見出し
+  @include heading($c-main);
+
+  // 正方形 + 画像
+  position: relative;
+
+  // メニュー
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .footer {
+    background-color: $c-black;
+    height: 4rem;
+    margin-top: 4rem;
+  }
+  object {
+    position: absolute;
+    left: calc(50% - clamp(20rem, 48vw, 40rem));
+    bottom: 1rem;
+  }
+  @include media(sp) {
+    ul {
+      grid-template-columns: 100%;
+    }
+  }
+}

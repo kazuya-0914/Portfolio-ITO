@@ -34,11 +34,21 @@ section {
   margin: 0 auto;
   text-align: center;
 }
+a {
+  color: $c-black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 // --- それぞれのSCSSの読み込み
 
 // 部品
 @import "components";
+
+// ハンバーガーメニュー
+@import "hamburger-menu";
 
 // ヘッダー
 @import "header";
