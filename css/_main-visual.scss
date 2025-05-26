@@ -1,15 +1,15 @@
 /* --- メインビジュアル --- */
 #main-visual {
   height: 100vh;
-  padding-top: 10rem;
+  padding: 10rem 0 6rem;
   background-color: $c-back;
   @include media(sp) {
     height: auto;
     padding-bottom: 2rem;
   }
   img {
-    width: 85%;
-    height: auto;
-    max-height: 85%;
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
   }
 }
