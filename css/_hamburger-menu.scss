@@ -1,33 +1,52 @@
 #hamburger-menu {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
   display: none;
+  transition: 0.3s all ease;
+  // display: none;
   // ベース背景
   @include back("hamburger-menu", $c-white, $c-black);
-
+  padding-top: 10rem;
   // 見出し
   @include heading($c-main);
 
-  // 正方形 + 画像
-  position: relative;
+  section {
+    // 画像用
+    position: relative;
+    height: 100%;
 
-  // メニュー
-  ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    // メニュー
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding-bottom: 5rem;
+    }
+    @include media(sp) {
+      ul {
+        grid-template-columns: 100%;
+      }
+    }
+    // 画像
+    object {
+      position: absolute;
+      left: calc(50% - clamp(20rem, 48vw, 40rem));
+      bottom: 1rem;
+    }
+    @include media(sp) {
+      object {
+        left: calc(50% - clamp(15rem, 28vw, 25rem));
+        bottom: -5rem;
+      }
+    }
   }
+
   .footer {
     background-color: $c-black;
     height: 4rem;
     margin-top: 4rem;
-  }
-  object {
-    position: absolute;
-    left: calc(50% - clamp(20rem, 48vw, 40rem));
-    bottom: 1rem;
-  }
-  @include media(sp) {
-    ul {
-      grid-template-columns: 100%;
-    }
   }
 }

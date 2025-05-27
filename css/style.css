@@ -29,13 +29,19 @@ a:hover {
 }
 
 #hamburger-menu {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
   display: none;
+  transition: 0.3s all ease;
   height: auto;
   padding-top: 6rem;
   background-color: white;
   color: #1f1f1f;
   font-size: 4rem;
-  position: relative;
+  padding-top: 10rem;
 }
 @media (max-width: 767px) {
   #hamburger-menu {
@@ -71,25 +77,36 @@ a:hover {
 #hamburger-menu h3::after {
   margin-left: clamp(2rem, 4vw, 3rem);
 }
-#hamburger-menu ul {
+#hamburger-menu section {
+  position: relative;
+  height: 100%;
+}
+#hamburger-menu section ul {
   list-style: none;
   display: grid;
   grid-template-columns: 50% 50%;
+  padding-bottom: 5rem;
 }
-#hamburger-menu .footer {
-  background-color: #1f1f1f;
-  height: 4rem;
-  margin-top: 4rem;
+@media (max-width: 767px) {
+  #hamburger-menu section ul {
+    grid-template-columns: 100%;
+  }
 }
-#hamburger-menu object {
+#hamburger-menu section object {
   position: absolute;
   left: calc(50% - clamp(20rem, 48vw, 40rem));
   bottom: 1rem;
 }
 @media (max-width: 767px) {
-  #hamburger-menu ul {
-    grid-template-columns: 100%;
+  #hamburger-menu section object {
+    left: calc(50% - clamp(15rem, 28vw, 25rem));
+    bottom: -5rem;
   }
+}
+#hamburger-menu .footer {
+  background-color: #1f1f1f;
+  height: 4rem;
+  margin-top: 4rem;
 }
 
 /* --- ヘッダー --- */
@@ -104,7 +121,7 @@ a:hover {
   width: 100%;
   padding: clamp(0.5rem, 1.2vw, 1rem) 1rem;
   background-color: white;
-  /* --- ハンバーガーメニュー --- */
+  /* --- ハンバーガーボタン --- */
 }
 #header .logo {
   display: flex;
@@ -129,13 +146,14 @@ a:hover {
 #header .hamburger {
   display: grid;
   grid-template-columns: 50%;
-  padding-top: 1.4rem;
+  padding-top: 1.6rem;
   padding-bottom: 0.7rem;
   justify-content: center;
   background-color: #883038;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   #header .hamburger {
@@ -148,6 +166,26 @@ a:hover {
   background-color: white;
   height: 3px;
   border-radius: 3rem;
+  transition: all 0.3s ease;
+}
+#header .hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+@media (max-width: 767px) {
+  #header .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+#header .hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+#header .hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+@media (max-width: 767px) {
+  #header .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 /* --- メインビジュアル --- */
