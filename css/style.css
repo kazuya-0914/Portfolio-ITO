@@ -46,7 +46,7 @@ a:hover {
 @media (max-width: 767px) {
   #hamburger-menu {
     height: auto;
-    padding-top: 6rem 4rem 0;
+    padding: 6rem 3rem 0;
     font-size: 3rem;
   }
 }
@@ -219,7 +219,7 @@ a:hover {
 @media (max-width: 767px) {
   #description {
     height: auto;
-    padding: 4rem;
+    padding: 4rem 3rem;
     font-size: 3rem;
   }
 }
@@ -287,7 +287,7 @@ a:hover {
 @media (max-width: 767px) {
   #profile {
     height: auto;
-    padding: 4rem;
+    padding: 4rem 3rem;
     font-size: 3rem;
   }
 }
@@ -423,7 +423,7 @@ a:hover {
 @media (max-width: 767px) {
   #skill {
     height: auto;
-    padding: 4rem;
+    padding: 4rem 3rem;
     font-size: 3rem;
   }
 }
@@ -549,7 +549,7 @@ a:hover {
 @media (max-width: 767px) {
   #work {
     height: auto;
-    padding: 4rem;
+    padding: 4rem 3rem;
     font-size: 3rem;
   }
 }
@@ -692,7 +692,7 @@ a:hover {
 @media (max-width: 767px) {
   #footer {
     height: auto;
-    padding: 4rem 4rem 0;
+    padding: 4rem 3rem 0;
     font-size: 3rem;
   }
 }
