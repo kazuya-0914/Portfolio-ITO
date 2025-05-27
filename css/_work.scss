@@ -36,6 +36,7 @@
       bottom: 3rem;
     }
     .square-2 {
+      right: calc(50% - clamp(12rem, 36vw, 25rem));
       top: 8rem;
     }
     .square-3 {

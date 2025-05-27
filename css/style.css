@@ -498,6 +498,7 @@ a:hover {
 }
 @media (max-width: 767px) {
   #skill .square-1 {
+    left: calc(50% - clamp(10rem, 40vw, 40rem));
     bottom: 4rem;
   }
   #skill .square-2 {
@@ -632,6 +633,7 @@ a:hover {
     bottom: 3rem;
   }
   #work .square-2 {
+    right: calc(50% - clamp(12rem, 36vw, 25rem));
     top: 8rem;
   }
   #work .square-3 {

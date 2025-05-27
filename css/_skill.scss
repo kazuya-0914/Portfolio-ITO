@@ -28,6 +28,7 @@
   }
   @include media(sp) {
     .square-1 {
+      left: calc(50% - clamp(10rem, 40vw, 40rem));
       bottom: 4rem;
     }
     .square-2 {
