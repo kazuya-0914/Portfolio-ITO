@@ -100,7 +100,7 @@ a:hover {
 @media (max-width: 767px) {
   #hamburger-menu section object {
     left: calc(50% - clamp(15rem, 28vw, 25rem));
-    bottom: -5rem;
+    bottom: -6rem;
   }
 }
 #hamburger-menu .footer {
