@@ -126,6 +126,7 @@ a:hover {
 #header .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 #header .logo div {
   color: #883038;
@@ -316,25 +317,47 @@ a:hover {
 #profile h3::after {
   margin-left: clamp(2rem, 4vw, 3rem);
 }
-#profile .square-3, #profile .square-2, #profile .square-1 {
+#profile .square-1 {
   position: absolute;
   width: 3rem;
   height: 3rem;
-}
-#profile .square-1 {
   background-color: #1f1f1f;
   left: calc(50% - clamp(10rem, 32vw, 30rem));
   bottom: 5rem;
 }
+@media (max-width: 767px) {
+  #profile .square-1 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #profile .square-2 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
   background-color: #1f1f1f;
   right: calc(50% - clamp(10rem, 32vw, 30rem));
   bottom: 14rem;
 }
+@media (max-width: 767px) {
+  #profile .square-2 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #profile .square-3 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
   background-color: #883038;
   right: calc(50% - clamp(5rem, 30vw, 30rem));
   bottom: 4rem;
+}
+@media (max-width: 767px) {
+  #profile .square-3 {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 @media (max-width: 767px) {
   #profile .square-1 {
@@ -430,25 +453,47 @@ a:hover {
 #skill h3::after {
   margin-left: clamp(2rem, 4vw, 3rem);
 }
-#skill .square-3, #skill .square-2, #skill .square-1 {
+#skill .square-1 {
   position: absolute;
   width: 3rem;
   height: 3rem;
-}
-#skill .square-1 {
   background-color: white;
   left: calc(50% - clamp(12rem, 40vw, 40rem));
   bottom: 10rem;
 }
+@media (max-width: 767px) {
+  #skill .square-1 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #skill .square-2 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
   background-color: white;
   right: calc(50% - clamp(10rem, 32vw, 30rem));
   top: 14rem;
 }
+@media (max-width: 767px) {
+  #skill .square-2 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #skill .square-3 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
   background-color: #ffb600;
   left: calc(50% - clamp(5rem, 20vw, 20rem));
   bottom: 3rem;
+}
+@media (max-width: 767px) {
+  #skill .square-3 {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 @media (max-width: 767px) {
   #skill .square-1 {
@@ -534,25 +579,47 @@ a:hover {
 #work h3::after {
   margin-left: clamp(2rem, 4vw, 3rem);
 }
-#work .square-3, #work .square-2, #work .square-1 {
+#work .square-1 {
   position: absolute;
   width: 3rem;
   height: 3rem;
-}
-#work .square-1 {
   background-color: #1f1f1f;
   right: calc(50% - clamp(12rem, 40vw, 40rem));
   bottom: 10rem;
 }
+@media (max-width: 767px) {
+  #work .square-1 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #work .square-2 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
   background-color: #1f1f1f;
   right: calc(50% - clamp(10rem, 32vw, 30rem));
   top: 14rem;
 }
+@media (max-width: 767px) {
+  #work .square-2 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #work .square-3 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
   background-color: #883038;
   right: calc(50% - clamp(15rem, 36vw, 25rem));
   bottom: 3rem;
+}
+@media (max-width: 767px) {
+  #work .square-3 {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 #work object {
   position: absolute;

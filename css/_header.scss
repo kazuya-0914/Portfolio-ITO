@@ -13,6 +13,7 @@
   .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
     div {
       color: $c-main;
       &:nth-of-type(1) {

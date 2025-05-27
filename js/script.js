@@ -1,17 +1,25 @@
 $(function(){
+
+  // ハンバーガーボタンをクリック
   $(".hamburger").on('click', function () {
+    hamburgerMenu();
+    $(this).toggleClass('active');
+  });
+
+  // ハンバーガーメニューをクリック
+  $(".anchor").on("click", function () {
+    hamburgerMenu();
+    $(".hamburger").removeClass('active');
+  });
+
+  // ハンバーガーメニューを表示 or 非表示
+  function hamburgerMenu() {
     const $target = $('#hamburger-menu')
     if ($target.css('display') === 'none') {
       $target.css('display', 'block');
     } else {
       $target.css('display', 'none');
     }
+  }
 
-    $(this).toggleClass('active');
-  });
-
-  $(".anchor").on("click", function () {
-    const $target = $('#hamburger-menu');
-    $target.css('opacity', 0);
-  });
 });

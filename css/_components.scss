@@ -69,3 +69,14 @@
     }
   }
 }
+
+// 正方形
+@mixin square() {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  @include media(sp) {
+    width: 2rem;
+    height: 2rem;
+  }
+}

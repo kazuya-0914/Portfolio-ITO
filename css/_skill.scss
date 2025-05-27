@@ -8,26 +8,20 @@
 
   // 正方形
   position: relative;
-  %square {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-  }
-
   .square-1 {
-    @extend %square;
+    @include square();
     background-color: $c-white;
     left: calc(50% - clamp(12rem, 40vw, 40rem));
     bottom: 10rem;
   }
   .square-2 {
-    @extend %square;
+    @include square();
     background-color: $c-white;
     right: calc(50% - clamp(10rem, 32vw, 30rem));
     top: 14rem;
   }
   .square-3 {
-    @extend %square;
+    @include square();
     background-color: $c-sub;
     left: calc(50% - clamp(5rem, 20vw, 20rem));
     bottom: 3rem;
