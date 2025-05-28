@@ -9,7 +9,6 @@
   // display: none;
   // ベース背景
   @include back("hamburger-menu", $c-white, $c-black);
-  padding-top: 10rem;
   // 見出し
   @include heading($c-main);
 
@@ -24,6 +23,7 @@
       display: grid;
       grid-template-columns: 50% 50%;
       padding-bottom: 5rem;
+      font-size: 2.5rem;
     }
     @include media(sp) {
       ul {
@@ -46,6 +46,7 @@
 
   .footer {
     background-color: $c-black;
+    width: 100%;
     height: 4rem;
     margin-top: 4rem;
   }

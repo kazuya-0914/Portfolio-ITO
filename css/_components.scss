@@ -24,7 +24,7 @@
     }
     @else if $height == "hamburger-menu" {
       height: auto;
-      padding: 6rem 3rem 0;
+      padding: 10rem 0 0;
     }
     @else {
       height: auto;
@@ -48,7 +48,7 @@
     position: relative;
     font-size: clamp(2rem, 4.8vw, 4rem);
     width: minmax(50%, 100%);
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 3rem auto;
     > span {
       &:nth-of-type(1) {
         color: $color;

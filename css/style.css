@@ -28,6 +28,11 @@ a:hover {
   text-decoration: underline;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 #hamburger-menu {
   width: 100%;
   position: fixed;
@@ -41,12 +46,11 @@ a:hover {
   background-color: white;
   color: #1f1f1f;
   font-size: 4rem;
-  padding-top: 10rem;
 }
 @media (max-width: 767px) {
   #hamburger-menu {
     height: auto;
-    padding: 6rem 3rem 0;
+    padding: 10rem 0 0;
     font-size: 3rem;
   }
 }
@@ -62,7 +66,7 @@ a:hover {
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
   width: minmax(50%, 100%);
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 #hamburger-menu h3 > span:nth-of-type(1) {
   color: #883038;
@@ -86,6 +90,7 @@ a:hover {
   display: grid;
   grid-template-columns: 50% 50%;
   padding-bottom: 5rem;
+  font-size: 2.5rem;
 }
 @media (max-width: 767px) {
   #hamburger-menu section ul {
@@ -105,6 +110,7 @@ a:hover {
 }
 #hamburger-menu .footer {
   background-color: #1f1f1f;
+  width: 100%;
   height: 4rem;
   margin-top: 4rem;
 }
@@ -303,7 +309,7 @@ a:hover {
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
   width: minmax(50%, 100%);
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 #profile h3 > span:nth-of-type(1) {
   color: #883038;
@@ -439,7 +445,7 @@ a:hover {
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
   width: minmax(50%, 100%);
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 #skill h3 > span:nth-of-type(1) {
   color: #ffb600;
@@ -566,7 +572,7 @@ a:hover {
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
   width: minmax(50%, 100%);
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 #work h3 > span:nth-of-type(1) {
   color: #883038;
@@ -710,7 +716,7 @@ a:hover {
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
   width: minmax(50%, 100%);
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 #footer h3 > span:nth-of-type(1) {
   color: #ffb600;
