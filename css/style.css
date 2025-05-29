@@ -71,6 +71,12 @@ ul {
   opacity: 1;
   margin: 0 auto 3rem auto;
 }
+@media (max-width: 767px) {
+  #hamburger-menu h3 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
+}
 #hamburger-menu h3 > span:nth-of-type(1) {
   color: #883038;
   font-size: clamp(3rem, 6.4vw, 5rem);
@@ -370,6 +376,12 @@ ul {
   opacity: 1;
   margin: 0 auto 3rem auto;
 }
+@media (max-width: 767px) {
+  #profile h3 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
+}
 #profile h3 > span:nth-of-type(1) {
   color: #883038;
   font-size: clamp(3rem, 6.4vw, 5rem);
@@ -543,6 +555,12 @@ ul {
   opacity: 1;
   margin: 0 auto 3rem auto;
 }
+@media (max-width: 767px) {
+  #skill h3 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
+}
 #skill h3 > span:nth-of-type(1) {
   color: #ffb600;
   font-size: clamp(3rem, 6.4vw, 5rem);
@@ -679,6 +697,12 @@ ul {
   width: 70%;
   opacity: 1;
   margin: 0 auto 3rem auto;
+}
+@media (max-width: 767px) {
+  #work h3 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
 }
 #work h3 > span:nth-of-type(1) {
   color: #883038;
@@ -825,6 +849,12 @@ ul {
   opacity: 1;
   margin: 0 auto 3rem auto;
 }
+@media (max-width: 767px) {
+  #footer h3 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
+}
 #footer h3 > span:nth-of-type(1) {
   color: #ffb600;
   font-size: clamp(3rem, 6.4vw, 5rem);
@@ -894,6 +924,12 @@ ul {
   width: 70%;
   opacity: 1;
   margin: 0 auto 3rem auto;
+}
+@media (max-width: 767px) {
+  #art h3 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
 }
 #art h3 > span:nth-of-type(1) {
   color: #883038;

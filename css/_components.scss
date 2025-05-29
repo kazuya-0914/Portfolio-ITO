@@ -50,6 +50,10 @@
     width: 70%;
     opacity: 1;
     margin: 0 auto 3rem auto;
+    @include media(sp) {
+      width: 100%;
+      margin: 0 0 3rem 0;
+    }
     > span {
       &:nth-of-type(1) {
         color: $color;

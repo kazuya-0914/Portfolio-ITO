@@ -2,7 +2,8 @@ $(function(){
 
   // ハンバーガーボタンをクリック
   $(".hamburger").on('click', function () {
-    $("#hamburger-menu").slideToggle(1000);
+    // $("#hamburger-menu").slideToggle(1000);
+    hamburgerMenu();
     $(this).toggleClass('active');
   });
 
@@ -13,7 +14,6 @@ $(function(){
   });
 
   // ハンバーガーメニューを表示 or 非表示
-  /*
   function hamburgerMenu() {
     const $target = $('#hamburger-menu')
     if ($target.css('display') == 'none') {
@@ -22,6 +22,5 @@ $(function(){
       $target.css('display', 'none');
     }
   }
-  */
 
 });
