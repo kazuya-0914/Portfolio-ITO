@@ -9,7 +9,7 @@ $(function(){
 
   // ハンバーガーメニューをクリック
   $(".anchor").on("click", function () {
-    $("#hamburger-menu").slideUp(1000);
+    hamburgerMenu();
     $(".hamburger").removeClass('active');
   });
 
