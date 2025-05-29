@@ -33,12 +33,14 @@ ul {
   padding: 0;
 }
 
+/* --- ハンバーガーメニュー --- */
 #hamburger-menu {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
+  height: 0;
   display: none;
   transition: 0.3s all ease;
   height: auto;
@@ -65,7 +67,8 @@ ul {
   align-items: center;
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
-  width: minmax(50%, 100%);
+  width: 70%;
+  opacity: 1;
   margin: 0 auto 3rem auto;
 }
 #hamburger-menu h3 > span:nth-of-type(1) {
@@ -133,6 +136,10 @@ ul {
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: 0.3s all;
+}
+#header .logo:hover {
+  opacity: 0.8;
 }
 #header .logo div {
   color: #883038;
@@ -161,6 +168,10 @@ ul {
   height: 5rem;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s all;
+}
+#header .hamburger:hover {
+  opacity: 0.8;
 }
 @media (max-width: 767px) {
   #header .hamburger {
@@ -214,6 +225,49 @@ ul {
      object-fit: contain;
 }
 
+/* --- スクロールダウン --- */
+#scroll-indicator {
+  position: absolute;
+  left: 5%;
+  top: 60vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  z-index: 10;
+}
+#scroll-indicator .scroll-bar {
+  width: 2px;
+  height: 40vh;
+  background: #1f1f1f;
+  animation: scroll-down 3s infinite;
+}
+@keyframes scroll-down {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+#scroll-indicator .scroll-text {
+  writing-mode: vertical-rl;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: #1f1f1f;
+}
+
 /* --- ディスクリプション --- */
 #description {
   height: "85vh";
@@ -229,16 +283,19 @@ ul {
     font-size: 3rem;
   }
 }
-#description p {
+#description .description {
   margin-bottom: 5rem;
 }
 @media (max-width: 767px) {
-  #description p {
+  #description .description {
     margin-bottom: 3rem;
     font-size: 3rem;
   }
 }
-#description p > span {
+#description .description > p {
+  opacity: 0;
+}
+#description .description > p > span {
   color: #ffb600;
 }
 #description .dots {
@@ -260,6 +317,7 @@ ul {
   height: 0.5rem;
   border-radius: 50%;
   background-color: #ffb600;
+  opacity: 1;
 }
 #description .dots > div:nth-of-type(1), #description .dots > div:nth-of-type(3) {
   background-color: white;
@@ -281,7 +339,7 @@ ul {
   }
 }
 
-/* --- プロフィール --- */
+/* --- プロフィール + プロフィールページ --- */
 #profile {
   height: "85vh";
   padding: 6rem;
@@ -308,7 +366,8 @@ ul {
   align-items: center;
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
-  width: minmax(50%, 100%);
+  width: 70%;
+  opacity: 1;
   margin: 0 auto 3rem auto;
 }
 #profile h3 > span:nth-of-type(1) {
@@ -343,13 +402,18 @@ ul {
   width: 3rem;
   height: 3rem;
   background-color: #1f1f1f;
-  right: calc(50% - clamp(10rem, 32vw, 30rem));
+  right: calc(50% - clamp(10rem, 28vw, 40rem));
   bottom: 14rem;
 }
 @media (max-width: 767px) {
   #profile .square-2 {
     width: 2rem;
     height: 2rem;
+  }
+}
+@media (max-width: 899px) {
+  #profile .square-2 {
+    bottom: 22rem;
   }
 }
 #profile .square-3 {
@@ -366,12 +430,20 @@ ul {
     height: 2rem;
   }
 }
+#profile object {
+  position: absolute;
+  left: calc(50% - clamp(20rem, 48vw, 40rem));
+  bottom: -0.5rem;
+}
 @media (max-width: 767px) {
   #profile .square-1 {
     bottom: 16rem;
   }
   #profile .square-3 {
     bottom: 2rem;
+  }
+  #profile object {
+    display: none;
   }
 }
 #profile .profile {
@@ -386,6 +458,16 @@ ul {
 }
 #profile .profile img {
   width: 70%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+#profile .profile img:hover {
+  transform: rotateY(360deg);
+  filter: contrast(200%);
+  transition: 0.3s all;
+}
+#profile .profile .text > p:nth-of-type(1) {
+  font-size: clamp(3rem, 5.6vw, 4em);
 }
 #profile .profile .text > p:nth-of-type(1) span:nth-of-type(1) {
   margin-right: clamp(0.5rem, 2vw, 1rem);
@@ -416,6 +498,19 @@ ul {
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-family: "Kiwi Maru", serif;
 }
+#profile .sub-profile {
+  padding-top: 4rem;
+}
+#profile .introduction {
+  max-width: 50%;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: "Kiwi Maru", serif;
+}
+@media (max-width: 767px) {
+  #profile .introduction {
+    max-width: 60%;
+  }
+}
 
 /* --- スキル --- */
 #skill {
@@ -444,7 +539,8 @@ ul {
   align-items: center;
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
-  width: minmax(50%, 100%);
+  width: 70%;
+  opacity: 1;
   margin: 0 auto 3rem auto;
 }
 #skill h3 > span:nth-of-type(1) {
@@ -527,6 +623,15 @@ ul {
   -moz-column-gap: 4rem;
        column-gap: 4rem;
 }
+#skill figcaption > div > figure > img {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+#skill figcaption > div > figure > img:hover {
+  transform: rotateY(360deg);
+  filter: contrast(200%);
+  transition: 0.3s all;
+}
 #skill figcaption > div > div > p:nth-of-type(1) {
   font-size: clamp(2rem, 4.8vw, 4rem);
 }
@@ -571,7 +676,8 @@ ul {
   align-items: center;
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
-  width: minmax(50%, 100%);
+  width: 70%;
+  opacity: 1;
   margin: 0 auto 3rem auto;
 }
 #work h3 > span:nth-of-type(1) {
@@ -715,7 +821,8 @@ ul {
   align-items: center;
   position: relative;
   font-size: clamp(2rem, 4.8vw, 4rem);
-  width: minmax(50%, 100%);
+  width: 70%;
+  opacity: 1;
   margin: 0 auto 3rem auto;
 }
 #footer h3 > span:nth-of-type(1) {
@@ -754,4 +861,70 @@ ul {
 #footer small {
   font-size: 12px;
   font-family: "Kiwi Maru", serif;
+}
+
+/* --- アートギャラリー --- */
+#art {
+  margin-top: 6rem;
+  height: "auto";
+  padding: 6rem;
+  background-color: #bcbcbc;
+  color: #1f1f1f;
+  font-size: 4rem;
+  position: relative;
+}
+@media (max-width: 767px) {
+  #art {
+    height: auto;
+    padding: 4rem 3rem;
+    font-size: 3rem;
+  }
+}
+#art h3::before, #art h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: gray;
+}
+#art h3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: clamp(2rem, 4.8vw, 4rem);
+  width: 70%;
+  opacity: 1;
+  margin: 0 auto 3rem auto;
+}
+#art h3 > span:nth-of-type(1) {
+  color: #883038;
+  font-size: clamp(3rem, 6.4vw, 5rem);
+}
+#art h3 > span:nth-of-type(2) {
+  align-self: flex-end;
+}
+#art h3::before {
+  margin-right: clamp(2rem, 4vw, 3rem);
+}
+#art h3::after {
+  margin-left: clamp(2rem, 4vw, 3rem);
+}
+#art object {
+  position: absolute;
+  left: calc(50% - clamp(10rem, 48vw, 40rem));
+  bottom: -0.5rem;
+}
+#art figcaption {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: end;
+  gap: 4rem;
+  font-size: clamp(0.8rem, 3.2vw, 3rem);
+  font-family: "Kiwi Maru", serif;
+  margin-bottom: 6rem;
+}
+@media (max-width: 767px) {
+  #art figcaption {
+    grid-template-columns: 45% 45%;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

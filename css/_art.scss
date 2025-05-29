@@ -1,0 +1,34 @@
+/* --- アートギャラリー --- */
+#art {
+  margin-top: 6rem;
+  // ベース背景
+  @include back("auto", $c-back, $c-black);
+
+  // 見出し
+  @include heading($c-main);
+
+  // 画像
+  position: relative;
+  object {
+    position: absolute;
+    left: calc(50% - clamp(10rem, 48vw, 40rem));
+    bottom: -0.5rem;
+  }
+
+  // ギャラリー
+  figcaption {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: end;
+    gap: 4rem;
+    font-size: clamp(0.8rem, 3.2vw, 3rem);
+    font-family: "Kiwi Maru", serif;
+    margin-bottom: 6rem;
+  }
+  @include media(sp) {
+    figcaption {
+      grid-template-columns: 45% 45%;
+      gap: 2rem;
+    }
+  }
+}

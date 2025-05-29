@@ -1,12 +1,13 @@
+/* --- ハンバーガーメニュー --- */
 #hamburger-menu {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
+  height: 0;
   display: none;
   transition: 0.3s all ease;
-  // display: none;
   // ベース背景
   @include back("hamburger-menu", $c-white, $c-black);
   // 見出し

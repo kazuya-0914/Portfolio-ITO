@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ポートフォリオサイト">
-  <title>ポートフォリオ</title>
+  <title>Portfolio</title>
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
   <!-- CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 <body>
   <!-- ヘッダー -->
   <header id="header">
-    <a href="/" class="logo">
+    <a href="./" class="logo">
       <img src="img/logo.png" alt="ロゴ">
       <div>AOI ITO</div>
       <div>Portfolio</div>
@@ -36,11 +37,11 @@
         <span>enu</span>
       </h3>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="#profile" class="anchor">Profile</a></li>
-        <li><a href="#skill" class="anchor">Skill</a></li>
-        <li><a href="#work" class="anchor">Work</a></li>
-        <li><a href="art">Art Gallery</a></li>
+        <li><a href="./">Home</a></li>
+        <li><a href="./#profile" class="anchor">Profile</a></li>
+        <li><a href="./#skill" class="anchor">Skill</a></li>
+        <li><a href="./#work" class="anchor">Work</a></li>
+        <li><a href="art.html">Art Gallery</a></li>
       </ul>
       <object>
         <img src="img/logo-l.png" alt="ロゴ">
@@ -58,14 +59,20 @@
       </section>
     </article>
 
+    <!-- スクロールダウン -->
+    <div id="scroll-indicator">
+      <div class="scroll-bar"></div>
+      <div class="scroll-text">SCROLL</div>
+    </div>
+
     <!-- ディスクリプション -->
     <article id="description">
       <section>
-        <p>
-          いちど すれちがったら<br>
-          なんども あいたくなる<br>
-          そんな <span>デザイン</span> を
-        </p>
+        <figure class="description">
+          <p>いちど すれちがったら</p>
+          <p>なんども あいたくなる</p>
+          <p>そんな <span>デザイン</span> を</p>
+        </figure>
         <!-- 点 -->
         <figure class="dots">
           <div></div>
@@ -86,7 +93,7 @@
         </h3>
         <div class="profile">
           <figure>
-            <a href="profile">
+            <a href="profile.html">
               <img src="img/profile.png" alt="プロフィール">
             </a>
           </figure>
@@ -220,5 +227,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/gsap.js"></script>
 </body>
 </html>

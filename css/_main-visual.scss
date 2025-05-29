@@ -13,3 +13,6 @@
     object-fit: contain;
   }
 }
+
+/* --- スクロールダウン --- */
+@include scroll-indicator();
