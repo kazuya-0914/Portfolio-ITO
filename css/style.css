@@ -215,20 +215,21 @@ ul {
 /* --- メインビジュアル --- */
 #main-visual {
   height: 100vh;
-  padding: 10rem 0 6rem;
+  padding: 10rem 4rem 6rem;
   background-color: #bcbcbc;
 }
 @media (max-width: 767px) {
   #main-visual {
     height: auto;
-    padding-bottom: 2rem;
+    padding: 6rem 4rem 6rem;
   }
 }
-#main-visual img {
-  height: 80%;
-  width: 80%;
-  -o-object-fit: contain;
-     object-fit: contain;
+#main-visual figure {
+  background-image: url("../../img/main-visual.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: calc(100vh - 16rem);
 }
 
 /* --- スクロールダウン --- */
