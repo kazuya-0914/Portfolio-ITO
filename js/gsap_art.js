@@ -14,6 +14,11 @@ gsap.timeline({})
   y: "-5rem",
   duration: 0.8,
 })
+.from('#art figcaption figure:nth-of-type(5), #art figcaption figure:nth-of-type(6)', {
+  opacity: 0,
+  y: "-5rem",
+  duration: 0.8,
+})
 
 gsap.timeline({
   scrollTrigger: {
@@ -22,11 +27,6 @@ gsap.timeline({
     toggleActions: 'play none none none',
     markers: false,
   },
-})
-.from('#art figcaption figure:nth-of-type(5), #art figcaption figure:nth-of-type(6)', {
-  opacity: 0,
-  y: "-5rem",
-  duration: 0.8,
 })
 .from('#art figcaption figure:nth-of-type(7), #art figcaption figure:nth-of-type(8)', {
   opacity: 0,
