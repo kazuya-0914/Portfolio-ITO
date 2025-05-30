@@ -109,7 +109,7 @@ ul {
 #hamburger-menu section object {
   position: absolute;
   left: calc(50% - clamp(20rem, 48vw, 40rem));
-  bottom: 1rem;
+  bottom: -6rem;
 }
 @media (max-width: 767px) {
   #hamburger-menu section object {

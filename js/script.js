@@ -2,14 +2,15 @@ $(function(){
 
   // ハンバーガーボタンをクリック
   $(".hamburger").on('click', function () {
-    // $("#hamburger-menu").slideToggle(1000);
-    hamburgerMenu();
+    $('#hamburger-menu').fadeToggle(500);
+    // hamburgerMenu();
     $(this).toggleClass('active');
   });
 
   // ハンバーガーメニューをクリック
   $(".anchor").on("click", function () {
-    hamburgerMenu();
+    $('#hamburger-menu').fadeOut(500);
+    // hamburgerMenu();
     $(".hamburger").removeClass('active');
   });
 
@@ -17,9 +18,19 @@ $(function(){
   function hamburgerMenu() {
     const $target = $('#hamburger-menu')
     if ($target.css('display') == 'none') {
-      $target.css('display', 'block');
+      $target.css(
+        {
+          'display': 'block',
+          'opacity': 1,
+        }
+      );
     } else {
-      $target.css('display', 'none');
+      $target.css(        
+        {
+          'display': 'none',
+          'opacity': 0,
+        }
+      );
     }
   }
 

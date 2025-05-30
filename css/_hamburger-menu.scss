@@ -35,7 +35,7 @@
     object {
       position: absolute;
       left: calc(50% - clamp(20rem, 48vw, 40rem));
-      bottom: 1rem;
+      bottom: -6rem;
     }
     @include media(sp) {
       object {
